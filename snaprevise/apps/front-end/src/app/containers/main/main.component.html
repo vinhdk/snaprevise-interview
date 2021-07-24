@@ -1,0 +1,9 @@
+<snaprevise-header [type]='type'></snaprevise-header>
+<snaprevise-nav></snaprevise-nav>
+<snaprevise-item [lineColor]="'#3480f7'" [addText]="''">
+  <smooth-dnd-container [groupName]="'paper'" [dragHandleSelector]="'.canDrag'" [getChildPayload]="usePayload()" (drop)="useDrop($event)">
+    <smooth-dnd-draggable *ngFor="let paper of papers; let i = index">
+      <snaprevise-paper [paper]='paper'></snaprevise-paper>
+    </smooth-dnd-draggable>
+  </smooth-dnd-container>
+</snaprevise-item>

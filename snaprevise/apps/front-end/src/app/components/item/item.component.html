@@ -1,0 +1,35 @@
+<div class='item' style='--color: {{color}}; --lineColor: {{lineColor}}'>
+  <div class='content' *ngIf='item'>
+    <div class='drag canDrag{{category}}'>
+      <fa-icon [icon]="['fas', 'grip-lines']"></fa-icon>
+    </div>
+    <div class='info'>
+      <div class='category'>
+          Past Paper {{category + ' - ' + item.id}}
+      </div>
+      <div class='main'>
+        <div class='name'>
+            {{item.title}}
+        </div>
+        <div class='action'>
+          <button class='edit'>
+            <fa-icon [icon]="['fas', 'pencil-alt']"></fa-icon>
+          </button>
+          <button class='remove'>
+            <fa-icon [icon]="['fas', 'trash-alt']"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='child' [class.small-left]="!item">
+    <div class='line' [class.hide]='hideLine' [class.small-left]="!item"></div>
+    <ng-content></ng-content>
+    <div class='add-button' *ngIf='addText != null' style="--left: {{(500 - (level * 24)) + 'px'}}">
+      <span>
+        <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        <b>Add new Past Paper {{addText}}</b>
+      </span>
+    </div>
+  </div>
+</div>

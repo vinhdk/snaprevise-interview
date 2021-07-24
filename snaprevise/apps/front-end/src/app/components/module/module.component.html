@@ -1,0 +1,7 @@
+<snaprevise-item [color]="'#fa3a3a'" [level]='1' [category]="'Module'" [lineColor]="'#ffa800'"  [item]='module' [addText]="'Topic'" [hideLine]='topics.length === 0 || topics.length === 1'>
+  <smooth-dnd-container [groupName]="'topic'" [dragHandleSelector]="'.canDragTopic'" [getChildPayload]="usePayload()" (drop)="useDrop($event)">
+    <smooth-dnd-draggable *ngFor="let topic of topics; let i = index">
+      <snaprevise-topic [topic]='topic'></snaprevise-topic>
+    </smooth-dnd-draggable>
+  </smooth-dnd-container>
+</snaprevise-item>

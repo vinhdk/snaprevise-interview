@@ -1,0 +1,30 @@
+header {
+  padding: 3px 0px;
+  width: 654px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  margin-top: 23px;
+  .item {
+    border-radius: 8px;
+    font-family: sans-serif;
+    height: 100%;
+    width: 165px;
+    font-size: 19.5px;
+    color: #bababa;
+    font-weight: normal;
+    white-space: pre-line;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    &.active {
+      background: #c2d9fd;
+      color: #478cf8;
+    }
+  }
+}

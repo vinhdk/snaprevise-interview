@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  padding: 10px 5px;
+  justify-content: space-between;
+  gap: 5px;
+  width: fit-content;
+  margin-bottom: 18px;
+  .select {
+    border-radius: 8px;
+    border: 1px solid #d6d6d6;
+    height: 40px;
+    width: 119px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2px;
+    fa-icon {
+      color: #101010;
+      font-size: 10px;
+    }
+  }
+  button {
+    outline: none;
+    border: none;
+    background: #e2e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 13px 0 7px;
+    border-radius: 5px;
+    fa-icon {
+      color: #2e6cbe;
+      font-size: 12px;
+    }
+    span {
+      color: #82a3ce;
+    }
+  }
+
+}

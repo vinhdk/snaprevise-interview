@@ -1,0 +1,127 @@
+:host {
+  .item {
+    .content {
+      height: 68px;
+      width: fit-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      border-left: 15px solid var(--color);
+      margin-bottom: 5px;
+      padding-left: 10px;
+      gap: 14px;
+      .drag {
+        cursor: pointer;
+        color: #d8d8d8;
+        font-size: 19px;
+      }
+      .info {
+        row-gap: 5px;
+        .category {
+          padding: 1px 10px;
+          border-radius: 25px;
+          color: white;
+          background: var(--color);
+          font-size: 12px;
+          font-weight: bold;
+          width: fit-content;
+          font-family: system-ui;
+        }
+        .main {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 11px;
+          .name {
+            font-weight: bold;
+            font-size: 23px;
+            color: #1a374b;
+            font-family: system-ui;
+            height: 50px;
+            display: flex;
+            align-items: center;
+          }
+          .action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            height: 50px;
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              outline: none;
+              border: none;
+              &.remove {
+                background: #f9e5e9;
+                fa-icon {
+                  color: #f86363;
+                }
+              }
+              &.edit {
+                background: #e5ecf8;
+                fa-icon {
+                  color: #3b84f7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .child {
+      position: relative;
+      padding-left: 24px;
+      height: fit-content;
+      &.small-left {
+        padding-left: 12px;
+      }
+      .line {
+        height: 100%;
+        width: 2px;
+        background: var(--lineColor);
+        position: absolute;
+        top: 5px;
+        left: 32px;
+        &.hide {
+          opacity: 0;
+        }
+        &.small-left {
+          left: 20px;
+        }
+      }
+      .add-button {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 70px;
+        position: relative;
+        cursor: pointer;
+        span {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          position: absolute;
+          font-family: system-ui;
+          left: var(--left);
+          align-items: center;
+          b, fa-icon {
+            color: #3782f7;
+          }
+          b {
+            font-size: 20px;
+          }
+          fa-icon {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+}
