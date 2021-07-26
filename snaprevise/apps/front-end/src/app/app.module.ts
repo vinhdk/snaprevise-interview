@@ -28,6 +28,8 @@ import {
   faTrashAlt,
   faUpload
 } from '@fortawesome/free-solid-svg-icons';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AppInterceptor } from './interceptors';
 
 const CONTAINERS = [MainComponent];
 const COMPONENTS = [
@@ -48,10 +50,16 @@ const COMPONENTS = [
     FontAwesomeModule,
     DragDropModule,
     NgxSmoothDnDModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    HttpClientModule,
     AppRoutes
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AppInterceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

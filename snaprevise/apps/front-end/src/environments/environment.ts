@@ -4,6 +4,13 @@
 
 export const environment = {
   production: false,
+  endPoint: '',
+  api: {
+    paper: '/api/v1/Paper',
+    module: '/api/v1/Module',
+    topic: '/api/v1/Topic',
+    question: '/api/v1/Question',
+  }
 };
 
 /*

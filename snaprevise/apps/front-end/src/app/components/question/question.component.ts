@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { IQuestion } from '../../interfaces';
 
 @Component({
@@ -7,14 +7,9 @@ import { IQuestion } from '../../interfaces';
   styleUrls: ['./question.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class QuestionComponent implements OnInit {
+export class QuestionComponent {
 
   @Input()
   public question: IQuestion | undefined;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
